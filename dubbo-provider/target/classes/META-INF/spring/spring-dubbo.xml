@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://code.alibabatech.com/schema/dubbo
+	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="bigSea_consumer" owner="bigSea" organization="dh"/>
+
+    <!--注册地址-->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <!--提供的端口-->
+    <dubbo:protocol name="dubbo" host="127.0.0.1" port="20888"/>
+
+    <!--使用注解配置暴露的服务，多个包可以用逗号隔开-->
+    <dubbo:annotation package="com.dahai.demo.dubbo.provider.impl"/>
+</beans>

@@ -1,0 +1,3 @@
+com\dahai\demo\dubbo\provider\main\ServiceMain.class
+com\dahai\demo\dubbo\provider\impl\TestServiceImpl.class
+com\dahai\demo\dubbo\provider\impl\AddServiceImpl.class
